@@ -4,243 +4,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Бесплатный калькулятор технологического сбора 2026. Расчёт ставок на смартфоны и ноутбуки, проверка товарных партий, Excel-отчёт.">
+<meta name="description" content="Бесплатный калькулятор технологического сбора 2026. Ставки Минпромторга, расчёт по партиям, аналитика и Excel-отчёт.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#112448">
-<title>Расчёт технологического сбора 2026 — онлайн-калькулятор | TechFee Analytics</title>
-
+<title>Калькулятор технологического сбора 2026 | TechFee Analytics</title>
 <style>
 :root {
-  --dark:#112448;
-  --blue:#285ed5;
-  --light:#f4f7fc;
-  --border:#dfe6f2;
-  --text:#20324c;
-  --muted:#718098;
+ --blue:#285ed5;--dark:#112448;--light:#f4f7fc;
+ --border:#dfe6f2;--text:#20324c;--muted:#718098;
 }
-* {box-sizing:border-box}
-body {
-  margin:0;
-  font:15px/1.55 Arial,sans-serif;
-  color:var(--text);
-  background:var(--light);
-}
-header {
-  background:linear-gradient(120deg,#10203d,#24477f);
-  color:white;
-  padding:30px 6% 45px;
-}
-.brand {font-size:21px;font-weight:bold}
-.hero {max-width:800px;margin-top:35px}
-h1 {font-size:clamp(28px,5vw,43px);line-height:1.2}
-.hero p {color:#d4e1f5;font-size:17px}
-main {max-width:1180px;margin:25px auto;padding:0 18px}
-.panel,.metric {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:22px;
-  margin-bottom:16px;
-}
-h2 {font-size:22px;margin-top:0}
-h3 {margin-top:0}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-.metrics {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:14px;
-}
-.metric small {color:var(--muted)}
-.metric strong {display:block;font-size:25px;margin-top:8px}
-label {
-  display:block;
-  font-size:13px;
-  font-weight:bold;
-  margin-bottom:7px;
-}
-input,select {
-  width:100%;
-  padding:12px;
-  border:1px solid #cad6e7;
-  border-radius:9px;
-  background:white;
-  color:var(--text);
-  font:inherit;
-}
-.field {margin-bottom:10px}
-button {
-  padding:12px 17px;
-  border-radius:9px;
-  cursor:pointer;
-  border:1px solid #d4def1;
-  background:#eef3fc;
-  color:#2854a9;
-  font-weight:bold;
-}
-button.primary {
-  color:white;
-  background:var(--blue);
-  border-color:var(--blue);
-}
-button:hover {filter:brightness(.96)}
-.actions {display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.notice {
-  padding:15px;
-  background:#fff6e4;
-  border:1px solid #eed9ab;
-  border-radius:10px;
-  margin-bottom:18px;
-}
-.scroll {overflow-x:auto}
-table {border-collapse:collapse;width:100%;min-width:770px}
-td,th {padding:12px;border-bottom:1px solid #e5eaf3;text-align:left}
-th {background:#f3f6fc;color:#5d6e8b;font-size:13px}
-.ok {color:#137b58;font-weight:bold}
-.warning {color:#a16908;font-weight:bold}
-.muted {color:var(--muted);font-size:13px}
-.big {font-size:29px;color:#2058bf;font-weight:bold}
-.tabs {display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
-.tabs button.active {background:var(--blue);color:white}
-.page {display:none}
-.page.active {display:block}
-.bar {height:13px;background:#e6edf8;border-radius:8px;overflow:hidden}
-.fill {background:#3969d9;height:100%}
-.barline {margin:14px 0}
-.pill {
-  display:inline-block;
-  padding:5px 12px;
-  background:#dcf6e9;
-  color:#146b4c;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-}
-footer {
-  text-align:center;
-  padding:30px;
-  color:#8995aa;
-}
-@media(max-width:600px) {
-  header {padding:25px 20px}
-  .panel {padding:17px}
-  .metric strong {font-size:21px}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 Arial,sans-serif;color:var(--text);background:var(--light)}
+header{background:linear-gradient(120deg,#10203d,#24477f);color:white;padding:32px 6% 45px}
+.brand{font-size:22px;font-weight:bold}
+header h1{font-size:clamp(28px,5vw,42px);max-width:850px;line-height:1.2}
+header p{color:#d4e1f5;font-size:17px;max-width:800px}
+main{max-width:1180px;margin:25px auto;padding:0 18px}
+.tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
+button{padding:12px 17px;border-radius:9px;border:1px solid #d4def1;background:#eef3fc;color:#2854a9;font-weight:bold;cursor:pointer}
+button.primary,.tabs button.active{background:var(--blue);color:white;border-color:var(--blue)}
+button:hover{filter:brightness(.96)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9fbdf5}
+.panel,.metric{background:white;border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:16px}
+h2{font-size:23px;margin-top:0}
+h3{margin:24px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:15px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:13px}
+label{display:block;font-size:13px;font-weight:bold;margin-bottom:7px}
+input,select{width:100%;padding:12px;border:1px solid #cad6e7;border-radius:9px;background:white;color:var(--text)}
+.metric small{color:var(--muted)}
+.metric strong{display:block;font-size:25px;margin-top:8px}
+.notice{padding:15px;background:#fff6e4;border:1px solid #eed9ab;border-radius:10px;margin-bottom:18px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px}
+td,th{padding:12px;border-bottom:1px solid #e5eaf3;text-align:left;vertical-align:top}
+th{background:#f3f6fc;color:#5d6e8b;font-size:13px}
+.ok{color:#137b58;font-weight:bold}
+.warning{color:#a16908;font-weight:bold}
+.muted{color:var(--muted);font-size:13px}
+.big{font-size:30px;color:#2058bf;font-weight:bold}
+.page{display:none}.page.active{display:block}
+.pill{display:inline-block;padding:5px 12px;background:#dcf6e9;color:#146b4c;border-radius:30px;font-size:12px;font-weight:bold}
+.steps{padding-left:23px}
+.steps li{margin:12px 0}
+.steps strong{color:#194ba3}
+.formula{padding:17px;background:#edf4ff;border-radius:10px;font-size:17px;font-weight:bold}
+.faq details{padding:15px 0;border-bottom:1px solid var(--border)}
+.faq summary{font-weight:bold;cursor:pointer}
+.bar{height:13px;background:#e6edf8;border-radius:8px;overflow:hidden;margin-top:6px}
+.fill{background:#3969d9;height:100%}
+.barline{margin:15px 0}
+a{color:#2256ba}
+footer{text-align:center;padding:30px;color:#8995aa}
+@media(max-width:600px){
+header{padding:24px 20px 33px}
+.panel{padding:17px}
+.metric strong{font-size:22px}
 }
 </style>
-
-<!-- Библиотека для создания настоящего XLSX -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </head>
-
 <body>
 <header>
-  <div class="brand">◈ TechFee Analytics</div>
-  <div class="hero">
-    <h1>Технологический сбор — рассчитайте за минуту</h1>
-    <p>
-      Бесплатный калькулятор для импортёров и производителей.
-      Рассчитайте расходы, сравните сценарии и получите Excel-отчёт.
-    </p>
-  </div>
+<div class="brand">◈ TechFee Analytics</div>
+<h1>Технологический сбор — рассчитайте онлайн</h1>
+<p>Бесплатный калькулятор для импортёров и производителей. Проверьте ставки, рассчитайте расходы и скачайте Excel-отчёт.</p>
 </header>
 
 <main>
-<div class="tabs">
-  <button class="active" onclick="showPage('calculator',this)">Калькулятор</button>
-  <button onclick="showPage('analytics',this)">Аналитика</button>
-  <button onclick="showPage('rates',this)">Ставки и нормативка</button>
-  <button onclick="showPage('about',this)">О технологическом сборе</button>
-</div>
+<nav class="tabs" aria-label="Разделы">
+<button class="active" data-page="calculator">Калькулятор</button>
+<button data-page="analytics">Аналитика</button>
+<button data-page="rates">Ставки и нормативка</button>
+<button data-page="about">О технологическом сборе</button>
+</nav>
 
 <section id="calculator" class="page active">
-
 <div class="notice">
-  <b>Внимание:</b> расчёт предварительный.
-  Ставки по приказу Минпромторга № 5366 применяются с 1 декабря 2026 года.
-  Сервис не подключён к государственной информационной системе мониторинга.
+<b>Важно:</b> расчёт носит предварительный характер. Приказ Минпромторга № 5366 вступает в силу 1 декабря 2026 года. Сервис не подключён к ГИС МТ и не проверяет сведения автоматически.
 </div>
-
 <div class="metrics">
-  <div class="metric"><small>Сумма сбора</small><strong id="total">0 ₽</strong></div>
-  <div class="metric"><small>Количество единиц</small><strong id="units">0</strong></div>
-  <div class="metric"><small>Товарных партий</small><strong id="count">0</strong></div>
-  <div class="metric"><small>Требуют проверки</small><strong id="warnings">0</strong></div>
+<div class="metric"><small>Сумма по рассчитанным партиям</small><strong id="total">0 ₽</strong></div>
+<div class="metric"><small>Количество единиц</small><strong id="units">0</strong></div>
+<div class="metric"><small>Товарных партий</small><strong id="count">0</strong></div>
+<div class="metric"><small>Требуют проверки</small><strong id="warnings">0</strong></div>
 </div>
 
 <div class="panel">
 <h2>1. Добавить товарную партию</h2>
-
 <form id="form">
 <div class="grid">
-  <div class="field">
-    <label>Название партии</label>
-    <input id="name" required placeholder="Партия смартфонов">
-  </div>
-
-  <div class="field">
-    <label>Категория</label>
-    <select id="category"></select>
-  </div>
-
-  <div class="field">
-    <label>Код ТН ВЭД ЕАЭС</label>
-    <input id="tn" required maxlength="10">
-  </div>
-
-  <div class="field">
-    <label>Код ОКПД 2</label>
-    <select id="okpd"></select>
-  </div>
-
-  <div class="field">
-    <label>Тип операции</label>
-    <select id="operation">
-      <option value="import">Импорт</option>
-      <option value="production">Производство в РФ</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label>Дата операции</label>
-    <input id="date" type="date" value="2026-12-01" required>
-  </div>
-
-  <div class="field">
-    <label>Количество единиц</label>
-    <input id="qty" type="number" min="1" step="1" value="1000" required>
-  </div>
-
-  <div class="field">
-    <label>Себестоимость единицы, ₽</label>
-    <input id="cost" type="number" min="0" step="0.01" placeholder="20000">
-  </div>
-
-  <div class="field">
-    <label>Сведения о товарном знаке и модели в ГИС МТ</label>
-    <select id="status">
-      <option value="unknown">Не проверены</option>
-      <option value="yes">Оба сведения имеются</option>
-      <option value="no">Хотя бы одного нет</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label>Основание проверки</label>
-    <input id="basis" placeholder="Документ или уведомление">
-  </div>
-
-  <div class="field">
-    <label>Дата проверки сведений</label>
-    <input id="checked" type="date">
-  </div>
+<div>
+<label for="name">Название партии</label>
+<input id="name" required maxlength="120" placeholder="Смартфоны — поставка № 1">
 </div>
-
+<div>
+<label for="category">Категория продукции</label>
+<select id="category"></select>
+</div>
+<div>
+<label for="tn">Код ТН ВЭД ЕАЭС</label>
+<input id="tn" required maxlength="10" inputmode="numeric">
+</div>
+<div>
+<label for="okpd">Код ОКПД 2</label>
+<select id="okpd"></select>
+</div>
+<div>
+<label for="operation">Тип операции</label>
+<select id="operation">
+<option value="import">Импорт</option>
+<option value="production">Производство в РФ</option>
+</select>
+</div>
+<div>
+<label for="date">Дата операции</label>
+<input id="date" type="date" value="2026-12-01" required>
+</div>
+<div>
+<label for="qty">Количество единиц, шт.</label>
+<input id="qty" type="number" min="1" max="100000000" step="1" value="1000" required>
+</div>
+<div>
+<label for="cost">Себестоимость единицы, ₽ (необязательно)</label>
+<input id="cost" type="number" min="0" step="0.01" placeholder="20000">
+</div>
+<div>
+<label for="status">Сведения о товарном знаке и модели в ГИС МТ</label>
+<select id="status">
+<option value="unknown">Не проверены</option>
+<option value="yes">Оба сведения имеются</option>
+<option value="no">Хотя бы одно отсутствует</option>
+</select>
+</div>
+</div>
 <div class="actions">
-  <button class="primary" type="submit">Добавить партию</button>
-  <button type="button" onclick="loadDemo()">Учебный пример</button>
+<button class="primary" type="submit">Добавить партию</button>
+<button type="reset">Очистить поля</button>
 </div>
 </form>
 </div>
@@ -249,48 +149,38 @@ footer {
 <h2>2. Реестр партий</h2>
 <div class="scroll">
 <table>
-<thead>
-<tr>
-<th>Продукция</th><th>Количество</th><th>Ставка</th>
-<th>Сумма</th><th>Статус</th><th>Действие</th>
-</tr>
-</thead>
+<thead><tr><th>Продукция</th><th>Количество</th><th>Ставка</th><th>Сумма</th><th>Проверка</th><th>Действие</th></tr></thead>
 <tbody id="rows"></tbody>
 </table>
 </div>
 <div class="actions">
-  <button onclick="clearAll()">Очистить реестр</button>
-  <button onclick="exportJSON()">Резервная копия JSON</button>
-  <button onclick="document.getElementById('jsonFile').click()">Восстановить JSON</button>
-  <input type="file" id="jsonFile" accept=".json" hidden>
+<button id="clearAll">Удалить все партии</button>
+<button id="backup">Сохранить резервную копию</button>
+<button id="restore">Восстановить из JSON</button>
+<input id="jsonFile" type="file" accept=".json" hidden>
 </div>
 </div>
 
 <div class="panel">
 <span class="pill">Бесплатно</span>
-<h2 style="margin-top:15px">3. Excel-отчёт по технологическому сбору</h2>
-<p>Скачайте файл XLSX с реестром партий, формулами расчёта, сравнением сценариев и нормативными ставками.</p>
+<h2 style="margin-top:14px">3. Excel-отчёт по технологическому сбору</h2>
+<p>Отчёт содержит реестр партий, формулы расчёта, итоговую сумму, сравнение сценариев и справочник нормативных ставок.</p>
 <p class="big">0 ₽</p>
-<button class="primary" onclick="downloadExcel()">Скачать Excel бесплатно</button>
-<p id="excelMessage" class="muted"></p>
-<p class="muted">Позже можно подключить платную выдачу PRO-отчёта за 299 ₽.</p>
+<button class="primary" id="downloadExcel">Скачать Excel бесплатно</button>
+<p id="excelMessage" class="muted" role="status"></p>
 </div>
-
 </section>
 
 <section id="analytics" class="page">
 <div class="panel">
 <h2>Сценарный анализ</h2>
 <div class="metrics">
-  <div class="metric"><small>Оба сведения есть</small><strong id="scenarioYes">0 ₽</strong></div>
-  <div class="metric"><small>Сведения отсутствуют</small><strong id="scenarioNo">0 ₽</strong></div>
-  <div class="metric"><small>Разница сценариев</small><strong id="difference">0 ₽</strong></div>
-  <div class="metric"><small>Дополнительная себестоимость</small><strong id="costEffect">—</strong></div>
+<div class="metric"><small>Оба сведения имеются</small><strong id="scenarioYes">0 ₽</strong></div>
+<div class="metric"><small>Хотя бы одно отсутствует</small><strong id="scenarioNo">0 ₽</strong></div>
+<div class="metric"><small>Разница сценариев</small><strong id="difference">0 ₽</strong></div>
+<div class="metric"><small>Сбор / исходная себестоимость</small><strong id="costEffect">—</strong></div>
 </div>
-<p class="muted">
-Сценарии предназначены для моделирования.
-Они не дают права произвольно выбирать коэффициент.
-</p>
+<p class="muted">Сценарии являются аналитическими оценками, а не подтверждёнными обязательствами. Ставка зависит от фактических сведений в ГИС МТ.</p>
 </div>
 <div class="panel">
 <h2>Структура расходов</h2>
@@ -301,425 +191,486 @@ footer {
 <section id="rates" class="page">
 <div class="panel">
 <h2>Ставки технологического сбора 2026</h2>
-<p>Приказ Минпромторга России от 13.10.2026 № 5366.</p>
+<p>Приказ Минпромторга России от 13 октября 2026 года № 5366. Действует с 1 декабря 2026 года.</p>
 <div class="scroll">
 <table>
-<thead>
-<tr>
-<th>Продукция</th><th>ТН ВЭД</th><th>ОКПД 2</th>
-<th>База, ₽</th><th>Сведения есть, ₽</th><th>Сведений нет, ₽</th>
-</tr>
-</thead>
+<thead><tr><th>Продукция</th><th>ТН ВЭД</th><th>ОКПД 2</th><th>База, ₽</th><th>Оба сведения, ₽</th><th>Нет сведения, ₽</th></tr></thead>
 <tbody id="ratesRows"></tbody>
 </table>
 </div>
-<p><a target="_blank" rel="noopener" href="https://base.garant.ru/415080153/">Открыть полный нормативный документ</a></p>
+<p><a href="https://base.garant.ru/415080153/" target="_blank" rel="noopener">Полный текст приказа № 5366</a></p>
 </div>
 </section>
 
 <section id="about" class="page">
+
 <div class="panel">
 <h2>Что такое технологический сбор?</h2>
-<p>
-Технологический сбор предусмотрен для отдельных видов продукции,
-включённых в нормативный перечень. В первоначальный перечень
-входят определённые категории портативной вычислительной техники
-и телефонных аппаратов.
-</p>
-<h3>Как рассчитывается сбор?</h3>
-<p><b>Сумма сбора = количество единиц × ставка за единицу.</b></p>
-<p>
-Ставка зависит от наличия сведений о товарном знаке и модели
-в государственной информационной системе мониторинга
-на установленный нормативным актом момент.
-</p>
-<h3>Кто платит?</h3>
-<p>
-Закон предусматривает плательщиков среди производителей
-и импортёров соответствующей продукции.
-Фактическая обязанность определяется по законодательству
-и обстоятельствам конкретной операции.
-</p>
-<h3>Можно ли использовать Excel как официальный документ?</h3>
-<p>
-Нет. Отчёт носит справочно-аналитический характер
-и не заменяет официальные документы и проверку классификации.
-</p>
+<p><b>Технологический сбор</b> — установленный федеральным законодательством платёж в бюджет, связанный с импортом в Россию или производством отдельных видов электронной компонентной базы и промышленной продукции, включённых в нормативные перечни.</p>
+<p>С 1 декабря 2026 года вступает в силу приказ Минпромторга России № 5366, утверждающий первоначальный перечень облагаемой продукции и ставки сбора.</p>
+
+<h3>Кто уплачивает технологический сбор?</h3>
+<p>Закон предусматривает плательщиков среди импортёров и производителей соответствующей продукции. Однако не любая электроника автоматически облагается сбором: нужно проверить товарную классификацию, нормативный перечень и обстоятельства операции.</p>
+
+<h3>На какую продукцию распространяется сбор?</h3>
+<p>Первоначальный перечень приказа № 5366 включает определённые виды портативных вычислительных машин, смартфонов и телефонных аппаратов. Для каждой категории указаны код ТН ВЭД ЕАЭС, код ОКПД 2 и ставки.</p>
+
+<h3>Как рассчитывается сумма?</h3>
+<div class="formula">Сумма сбора = количество единиц продукции × установленная ставка за единицу</div>
+<p>Размер ставки зависит от наличия в ГИС МТ информации о товарном знаке и модели продукции на момент получения уведомления о вводе товара в оборот.</p>
+<ul>
+<li>При наличии обоих сведений применяется коэффициент −0,33.</li>
+<li>При отсутствии хотя бы одного сведения применяется коэффициент +0,33.</li>
+</ul>
+<p>В TechFee Analytics используются уже округлённые ставки, опубликованные в приказе.</p>
+</div>
+
+<div class="panel">
+<h2>Инструкция по заполнению калькулятора</h2>
+<p>Для корректного предварительного расчёта последовательно заполните поля.</p>
+<ol class="steps">
+<li><strong>Название партии.</strong> Введите собственное название, например «Смартфоны — поставка № 1». Это название отобразится в реестре и Excel-отчёте.</li>
+<li><strong>Категория продукции.</strong> Выберите тип продукции из выпадающего списка. Если товар не соответствует представленным категориям, расчёт по ним применять нельзя.</li>
+<li><strong>Код ТН ВЭД ЕАЭС.</strong> Код автоматически подставляется после выбора категории. Сверьте его с документами на продукцию.</li>
+<li><strong>Код ОКПД 2.</strong> Выберите соответствующий код. Для ноутбуков предусмотрено исключение <code>26.20.11.140</code>.</li>
+<li><strong>Тип операции.</strong> Выберите «Импорт» для ввезённой продукции или «Производство в РФ» для продукции российского производства.</li>
+<li><strong>Дата операции.</strong> Укажите дату. Если она предшествует 1 декабря 2026 года, программа направит строку на дополнительную проверку. Дата здесь используется как предварительный фильтр, а не как окончательное определение момента возникновения обязательства.</li>
+<li><strong>Количество единиц.</strong> Введите точное количество товаров в партии — положительное целое число.</li>
+<li><strong>Себестоимость единицы.</strong> Необязательное поле. Используется для оценки дополнительной нагрузки на себестоимость.</li>
+<li><strong>Сведения в ГИС МТ.</strong> Выберите фактический статус информации о товарном знаке и модели. Если статус неизвестен, оставьте «Не проверены».</li>
+<li><strong>Добавить партию.</strong> Нажмите кнопку и проверьте появившуюся строку в реестре. Для следующей партии повторите действия.</li>
+<li><strong>Аналитика.</strong> Откройте вкладку «Аналитика», чтобы сравнить суммы по сценариям.</li>
+<li><strong>Excel-отчёт.</strong> Вернитесь во вкладку «Калькулятор» и нажмите «Скачать Excel бесплатно».</li>
+</ol>
+<div class="notice">
+Если программа показывает «Требует проверки», сумма такой партии не включается в общий итог. Это не означает, что товар освобождён от технологического сбора.
+</div>
+</div>
+
+<div class="panel faq">
+<h2>Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему калькулятор показывает 0 ₽?</summary>
+<p>Возможно, вы ещё не добавили партии или программа выявила непроверенные сведения, неверную классификацию либо дату, требующую проверки. Посмотрите колонку «Проверка».</p>
+</details>
+
+<details>
+<summary>Обязательно ли указывать себестоимость?</summary>
+<p>Нет. Для расчёта суммы сбора достаточно количества и ставки. Себестоимость нужна только для управленческой аналитики.</p>
+</details>
+
+<details>
+<summary>Что делать, если сведения в ГИС МТ не проверены?</summary>
+<p>Выберите «Не проверены». Калькулятор не будет считать соответствующую сумму подтверждённой и предложит уточнить данные.</p>
+</details>
+
+<details>
+<summary>Можно ли скачать Excel бесплатно?</summary>
+<p>Да. На текущем этапе Excel-отчёт доступен без оплаты и регистрации. Для загрузки библиотеки формирования Excel необходимо интернет-соединение.</p>
+</details>
+
+<details>
+<summary>Можно ли считать результат официальным расчётом?</summary>
+<p>Нет. Сервис предназначен для предварительной оценки. Он не заменяет проверку законодательства, классификации продукции и документов, подтверждающих необходимые сведения.</p>
+</details>
+
+<details>
+<summary>Сохраняются ли введённые данные?</summary>
+<p>Да, в локальном хранилище вашего браузера. Данные не синхронизируются между устройствами. Для резервного копирования используйте кнопку сохранения JSON.</p>
+</details>
 </div>
 </section>
-
 </main>
 
 <footer>
-TechFee Analytics · Независимый аналитический сервис · 2026<br>
-Данные сохраняются локально в браузере. Перед коммерческим запуском необходимо добавить сведения о владельце и правовые документы.
+TechFee Analytics · 2026 · Независимый информационно-аналитический сервис
 </footer>
 
 <script>
-const RULES = [
- {id:"laptop",name:"Ноутбуки",tn:"8471300000",
-  okpd:["26.20.11"],excluded:"26.20.11.140",
-  base:746,yes:500,no:992},
- {id:"cordless",name:"Проводные телефоны с беспроводной трубкой",
-  tn:"8517110000",okpd:["26.30.21.000"],base:149,yes:100,no:198},
- {id:"smartphone",name:"Смартфоны",tn:"8517130000",
-  okpd:["26.30.22.110"],base:373,yes:250,no:496},
- {id:"mobile",name:"Другие аппараты сотовых сетей",tn:"8517140000",
-  okpd:["26.30.22.110"],base:75,yes:50,no:100},
- {id:"telephone",name:"Прочие телефонные аппараты",tn:"8517180000",
-  okpd:["26.30.23.170","26.30.23.180","26.30.23.210"],
-  base:37,yes:25,no:49}
+const RULES=[
+{id:"laptop",name:"Ноутбуки",tn:"8471300000",
+ okpd:["26.20.11"],excluded:"26.20.11.140",
+ base:746,yes:500,no:992},
+{id:"cordless",name:"Телефоны с беспроводной трубкой",
+ tn:"8517110000",okpd:["26.30.21.000"],
+ base:149,yes:100,no:198},
+{id:"smartphone",name:"Смартфоны",
+ tn:"8517130000",okpd:["26.30.22.110"],
+ base:373,yes:250,no:496},
+{id:"mobile",name:"Другие аппараты сотовых сетей",
+ tn:"8517140000",okpd:["26.30.22.110"],
+ base:75,yes:50,no:100},
+{id:"telephone",name:"Прочие телефонные аппараты",
+ tn:"8517180000",
+ okpd:["26.30.23.170","26.30.23.180","26.30.23.210"],
+ base:37,yes:25,no:49}
 ];
 
-const $ = id => document.getElementById(id);
-const money = n => Number(n).toLocaleString("ru-RU") + " ₽";
-const clean = s => String(s ?? "").replace(/[&<>"']/g, c =>
-  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])
+const $=id=>document.getElementById(id);
+const money=n=>Number(n).toLocaleString("ru-RU")+" ₽";
+const clean=s=>String(s??"").replace(/[&<>"']/g,c=>
+ ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])
 );
 
-let products = [];
-try {
-  const saved = JSON.parse(localStorage.getItem("techfee_v6") || "[]");
-  if (Array.isArray(saved)) products = saved;
-} catch(e) {}
+let products=[];
+try{
+ const saved=JSON.parse(localStorage.getItem("techfee_v8")||"[]");
+ if(Array.isArray(saved))products=saved.slice(0,500);
+}catch(e){}
 
-function save() {
-  try {
-    localStorage.setItem("techfee_v6",JSON.stringify(products));
-  } catch(e) {
-    alert("Не удалось сохранить данные. Создайте резервную копию.");
-  }
+function save(){
+ try{
+  localStorage.setItem("techfee_v8",JSON.stringify(products));
+ }catch(e){
+  console.warn("Не удалось сохранить реестр",e);
+ }
 }
 
-function showPage(id,button) {
-  document.querySelectorAll(".page").forEach(x =>
-    x.classList.toggle("active",x.id===id));
-  document.querySelectorAll(".tabs button").forEach(x =>
-    x.classList.toggle("active",x===button));
-}
-
-$("category").innerHTML = RULES.map(r =>
-  `<option value="${r.id}">${r.name}</option>`).join("");
-
-function categoryChanged() {
-  const r = RULES.find(x => x.id===$("category").value);
-  $("tn").value = r.tn;
-  $("okpd").innerHTML =
-    `<option value="">Не указан / требует проверки</option>` +
-    r.okpd.map(x=>`<option value="${x}">${x}</option>`).join("") +
-    (r.excluded
-      ? `<option value="${r.excluded}">${r.excluded} — исключение</option>`
-      : "");
-}
-$("category").onchange = categoryChanged;
-$("category").value = "smartphone";
-categoryChanged();
-
-function calculate(p) {
-  const r = RULES.find(x=>x.id===p.category);
-  const errors = [];
-  if (!r) return {valid:false,errors:["Неизвестная категория"]};
-
-  if (p.tn!==r.tn) errors.push("Проверить код ТН ВЭД");
-  if (!p.okpd) errors.push("Не указан ОКПД 2");
-  else if (p.okpd===r.excluded)
-    errors.push("Исключение по ОКПД 2");
-  else if (!r.okpd.includes(p.okpd))
-    errors.push("Проверить ОКПД 2");
-
-  if (!p.date || p.date<"2026-12-01")
-    errors.push("Дата до вступления приказа");
-
-  if (p.status==="unknown")
-    errors.push("Сведения в ГИС МТ не проверены");
-
-  if (!p.basis || !p.checked)
-    errors.push("Нет основания или даты проверки");
-
-  if (p.checked && p.date && p.checked>p.date)
-    errors.push("Проверить дату сведений");
-
-  const qty = Number(p.qty);
-  if (!Number.isSafeInteger(qty) || qty<=0)
-    errors.push("Неверное количество");
-
-  const rate = p.status==="yes" ? r.yes :
-               p.status==="no" ? r.no : null;
-
-  return {
-    r,rate,errors,
-    valid:errors.length===0,
-    sum:errors.length===0 ? qty*rate : null
-  };
-}
-
-function render() {
-  save();
-  const entries = products.map(p=>({p,c:calculate(p)}));
-  const valid = entries.filter(x=>x.c.valid);
-  const total = valid.reduce((s,x)=>s+x.c.sum,0);
-  const units = valid.reduce((s,x)=>s+Number(x.p.qty),0);
-  const initialCost = valid.reduce((s,x)=>
-    s+(Number(x.p.cost)||0)*Number(x.p.qty),0);
-
-  $("total").textContent = money(total);
-  $("units").textContent = units.toLocaleString("ru-RU");
-  $("count").textContent = products.length;
-  $("warnings").textContent = entries.length-valid.length;
-  $("costEffect").textContent = initialCost
-    ? (total/initialCost*100).toFixed(2)+"%" : "—";
-
-  $("rows").innerHTML = entries.length ?
-    entries.map(({p,c},i)=>`
-      <tr>
-        <td><b>${clean(p.name)}</b><br><small>${clean(p.tn)}</small></td>
-        <td>${clean(p.qty)}</td>
-        <td>${c.rate===null||c.rate===undefined?"—":money(c.rate)}</td>
-        <td>${c.valid?money(c.sum):"—"}</td>
-        <td class="${c.valid?"ok":"warning"}">
-          ${c.valid?"Предварительный расчёт":clean(c.errors.join("; "))}
-        </td>
-        <td><button onclick="removeItem(${i})">Удалить</button></td>
-      </tr>`).join("") :
-    `<tr><td colspan="6" class="muted">Пока нет товарных партий.</td></tr>`;
-
-  let yes=0,no=0;
-  const groups={};
-
-  entries.forEach(({p,c})=>{
-    if(c.valid) groups[c.r.name]=(groups[c.r.name]||0)+c.sum;
-
-    if(c.r && p.tn===c.r.tn &&
-       c.r.okpd.includes(p.okpd) &&
-       p.date>="2026-12-01" &&
-       Number.isSafeInteger(+p.qty) && +p.qty>0) {
-      yes += p.qty*c.r.yes;
-      no += p.qty*c.r.no;
-    }
+document.querySelectorAll("[data-page]").forEach(button=>{
+ button.addEventListener("click",()=>{
+  document.querySelectorAll(".page").forEach(page=>{
+   page.classList.toggle("active",page.id===button.dataset.page);
   });
-
-  $("scenarioYes").textContent=money(yes);
-  $("scenarioNo").textContent=money(no);
-  $("difference").textContent=money(no-yes);
-
-  const max=Math.max(1,...Object.values(groups));
-  $("bars").innerHTML=Object.entries(groups).map(([name,value])=>`
-    <div class="barline">
-      <b>${clean(name)}</b> — ${money(value)}
-      <div class="bar">
-        <div class="fill" style="width:${100*value/max}%"></div>
-      </div>
-    </div>`).join("") || "<p class='muted'>Пока нет рассчитанных партий.</p>";
-}
-
-$("form").onsubmit=e=>{
-  e.preventDefault();
-  const qty=Number($("qty").value);
-  const cost=$("cost").value===""?null:Number($("cost").value);
-
-  if(!Number.isSafeInteger(qty)||qty<=0||
-     qty>100000000||(cost!==null&&(!Number.isFinite(cost)||cost<0))) {
-    alert("Проверьте количество и себестоимость.");
-    return;
-  }
-  if(products.length>=500) {
-    alert("Максимум 500 партий.");
-    return;
-  }
-
-  products.push({
-    name:$("name").value.trim(),
-    category:$("category").value,
-    tn:$("tn").value.replace(/\s/g,""),
-    okpd:$("okpd").value,
-    operation:$("operation").value,
-    date:$("date").value,
-    qty,cost,
-    status:$("status").value,
-    basis:$("basis").value.trim(),
-    checked:$("checked").value
+  document.querySelectorAll("[data-page]").forEach(b=>{
+   b.classList.toggle("active",b===button);
   });
+ });
+});
 
-  render();
-  $("name").value="";
-  $("qty").value=1000;
-};
+$("category").innerHTML=RULES.map(r=>
+ `<option value="${r.id}">${clean(r.name)}</option>`
+).join("");
 
-function removeItem(i) {
-  products.splice(i,1);
-  render();
+function updateCategory(){
+ const r=RULES.find(x=>x.id===$("category").value);
+ if(!r)return;
+ $("tn").value=r.tn;
+ $("okpd").innerHTML=
+  `<option value="">Не указан / требует проверки</option>`+
+  r.okpd.map(x=>`<option value="${x}">${x}</option>`).join("")+
+  (r.excluded
+   ?`<option value="${r.excluded}">${r.excluded} — исключение</option>`
+   :"");
+}
+$("category").value="smartphone";
+$("category").addEventListener("change",updateCategory);
+updateCategory();
+
+function calculate(p){
+ const r=RULES.find(x=>x.id===p.category);
+ const errors=[];
+ if(!r)return{r:null,rate:null,sum:null,valid:false,errors:["Неизвестная категория"]};
+
+ if(p.tn!==r.tn)errors.push("Проверить ТН ВЭД");
+ if(!p.okpd)errors.push("Не указан ОКПД 2");
+ else if(r.excluded&&p.okpd===r.excluded)
+  errors.push("Исключение ОКПД 2");
+ else if(!r.okpd.includes(p.okpd))
+  errors.push("Проверить ОКПД 2");
+
+ if(!p.date||p.date<"2026-12-01")
+  errors.push("Проверить дату и переходные нормы");
+
+ if(!["import","production"].includes(p.operation))
+  errors.push("Проверить тип операции");
+
+ if(!["yes","no"].includes(p.status))
+  errors.push("Сведения ГИС МТ не проверены");
+
+ const qty=Number(p.qty);
+ if(!Number.isSafeInteger(qty)||qty<=0||qty>100000000)
+  errors.push("Неверное количество");
+
+ const rate=p.status==="yes"?r.yes:
+            p.status==="no"?r.no:null;
+ const valid=errors.length===0;
+ return{r,rate,sum:valid?qty*rate:null,valid,errors};
 }
 
-function clearAll() {
-  if(confirm("Удалить все партии?")) {
-    products=[];
-    render();
+function render(){
+ save();
+ const entries=products.map(p=>({p,c:calculate(p)}));
+ const valid=entries.filter(x=>x.c.valid);
+
+ const total=valid.reduce((s,x)=>s+x.c.sum,0);
+ const units=valid.reduce((s,x)=>s+Number(x.p.qty),0);
+ const cost=valid.reduce((s,x)=>
+  s+Number(x.p.cost||0)*Number(x.p.qty),0);
+
+ $("total").textContent=money(total);
+ $("units").textContent=units.toLocaleString("ru-RU");
+ $("count").textContent=products.length;
+ $("warnings").textContent=entries.length-valid.length;
+ $("costEffect").textContent=cost
+  ?(total/cost*100).toFixed(2)+"%":"—";
+
+ $("rows").innerHTML=entries.length
+ ?entries.map(({p,c},i)=>`
+ <tr>
+ <td><b>${clean(p.name)}</b><br>
+ <small>${clean(p.tn)} · ${clean(p.okpd)}</small></td>
+ <td>${clean(p.qty)}</td>
+ <td>${c.rate===null?"—":money(c.rate)}</td>
+ <td>${c.valid?money(c.sum):"—"}</td>
+ <td class="${c.valid?"ok":"warning"}">
+ ${c.valid?"Предварительный расчёт":clean(c.errors.join("; "))}
+ </td>
+ <td><button data-delete="${i}">Удалить</button></td>
+ </tr>`).join("")
+ :`<tr><td colspan="6" class="muted">Добавьте первую товарную партию.</td></tr>`;
+
+ let low=0,high=0;
+ const groups={};
+
+ entries.forEach(({p,c})=>{
+  if(c.valid){
+   groups[c.r.name]=(groups[c.r.name]||0)+c.sum;
   }
+  if(c.r&&p.tn===c.r.tn&&
+   c.r.okpd.includes(p.okpd)&&
+   p.date>="2026-12-01"&&
+   Number.isSafeInteger(Number(p.qty))&&
+   Number(p.qty)>0&&Number(p.qty)<=100000000){
+    low+=Number(p.qty)*c.r.yes;
+    high+=Number(p.qty)*c.r.no;
+  }
+ });
+
+ $("scenarioYes").textContent=money(low);
+ $("scenarioNo").textContent=money(high);
+ $("difference").textContent=money(high-low);
+
+ const max=Math.max(1,...Object.values(groups));
+ $("bars").innerHTML=Object.entries(groups).map(([name,value])=>`
+ <div class="barline">
+ <b>${clean(name)}</b> — ${money(value)}
+ <div class="bar"><div class="fill" style="width:${value/max*100}%"></div></div>
+ </div>`).join("")||
+ "<p class='muted'>Нет рассчитанных партий.</p>";
 }
 
-function loadDemo() {
-  if(products.length && !confirm("Заменить реестр учебными данными?"))
-    return;
+$("form").addEventListener("submit",e=>{
+ e.preventDefault();
 
-  products=[
-    {name:"Смартфоны — пример",category:"smartphone",
-     tn:"8517130000",okpd:"26.30.22.110",
-     operation:"import",date:"2026-12-05",
-     qty:1000,cost:20000,status:"yes",
-     basis:"Учебный пример",checked:"2026-12-05"},
-    {name:"Ноутбуки — пример",category:"laptop",
-     tn:"8471300000",okpd:"26.20.11",
-     operation:"production",date:"2026-12-05",
-     qty:500,cost:45000,status:"no",
-     basis:"Учебный пример",checked:"2026-12-05"}
-  ];
+ const qty=Number($("qty").value);
+ const cost=$("cost").value===""
+  ?null:Number($("cost").value);
+
+ if(!Number.isSafeInteger(qty)||qty<=0||qty>100000000||
+  cost!==null&&(!Number.isFinite(cost)||cost<0)){
+  alert("Проверьте количество и себестоимость.");
+  return;
+ }
+
+ if(products.length>=500){
+  alert("Максимум 500 партий.");
+  return;
+ }
+
+ products.push({
+  name:$("name").value.trim(),
+  category:$("category").value,
+  tn:$("tn").value.trim(),
+  okpd:$("okpd").value,
+  operation:$("operation").value,
+  date:$("date").value,
+  qty:qty,
+  cost:cost,
+  status:$("status").value
+ });
+
+ render();
+ $("name").value="";
+});
+
+$("form").addEventListener("reset",()=>{
+ setTimeout(updateCategory,0);
+});
+
+$("rows").addEventListener("click",e=>{
+ const b=e.target.closest("[data-delete]");
+ if(!b)return;
+ products.splice(Number(b.dataset.delete),1);
+ render();
+});
+
+$("clearAll").addEventListener("click",()=>{
+ if(confirm("Удалить все товарные партии?")){
+  products=[];
   render();
+ }
+});
+
+function saveFile(blob,name){
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement("a");
+ a.href=url;
+ a.download=name;
+ a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),2000);
 }
+
+$("backup").addEventListener("click",()=>{
+ saveFile(
+  new Blob([JSON.stringify(products,null,2)],
+   {type:"application/json"}),
+  "TechFee_backup.json"
+ );
+});
+
+$("restore").addEventListener("click",()=>{
+ $("jsonFile").click();
+});
+
+$("jsonFile").addEventListener("change",async e=>{
+ const file=e.target.files[0];
+ if(!file)return;
+ try{
+  if(file.size>2000000)throw Error("Слишком большой файл");
+  const data=JSON.parse(await file.text());
+  if(!Array.isArray(data)||data.length>500)
+   throw Error("Неверный формат");
+  if(data.some(p=>!p||typeof p!=="object"||
+    typeof p.name!=="string"||p.name.length>120))
+   throw Error("Некорректные данные");
+
+  if(confirm("Заменить текущий реестр?")){
+   products=data;
+   render();
+  }
+ }catch(err){
+  alert("Ошибка: "+err.message);
+ }
+ e.target.value="";
+});
 
 $("ratesRows").innerHTML=RULES.map(r=>`
 <tr>
-<td>${clean(r.name)}</td><td>${r.tn}</td>
+<td>${clean(r.name)}</td>
+<td>${r.tn}</td>
 <td>${r.okpd.join(", ")} ${r.excluded?"(кроме "+r.excluded+")":""}</td>
 <td>${r.base}</td><td>${r.yes}</td><td>${r.no}</td>
 </tr>`).join("");
 
-function saveFile(blob,filename) {
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");
-  a.href=url;
-  a.download=filename;
-  a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),2000);
-}
+$("downloadExcel").addEventListener("click",()=>{
+ if(typeof XLSX==="undefined"){
+  $("excelMessage").textContent=
+   "Библиотека Excel не загрузилась. Проверьте подключение к интернету.";
+  return;
+ }
 
-function exportJSON() {
-  saveFile(
-    new Blob([JSON.stringify(products,null,2)],{type:"application/json"}),
-    "TechFee_backup.json"
-  );
-}
+ const wb=XLSX.utils.book_new();
 
-$("jsonFile").onchange=async e=>{
-  const file=e.target.files[0];
-  if(!file)return;
-  try {
-    if(file.size>2000000)throw Error("Файл слишком большой");
-    const data=JSON.parse(await file.text());
-    if(!Array.isArray(data)||data.length>500)
-      throw Error("Неверный формат");
-    if(confirm("Заменить текущие партии?")) {
-      products=data.filter(p=>p&&typeof p==="object");
-      render();
-    }
-  }catch(err) {
-    alert("Ошибка: "+err.message);
-  }
-  e.target.value="";
-};
+ const headers=[
+  "Наименование","Операция","Дата","ТН ВЭД",
+  "ОКПД 2","Количество","Себестоимость",
+  "Сведения в ГИС МТ","Ставка","Сумма","Проверка"
+ ];
 
-function downloadExcel() {
-  if(typeof XLSX==="undefined") {
-    $("excelMessage").textContent=
-      "Библиотека Excel не загрузилась. Проверьте интернет-соединение.";
-    return;
-  }
+ const rows=[headers];
 
-  const wb=XLSX.utils.book_new();
-  const rows=[[
-    "Наименование","Тип операции","Дата","ТН ВЭД",
-    "ОКПД 2","Количество","Себестоимость",
-    "Сведения в ГИС МТ","Основание проверки",
-    "Ставка","Сумма","Статус"
-  ]];
+ products.forEach(p=>{
+  const c=calculate(p);
+  rows.push([
+   p.name,
+   p.operation==="import"?"Импорт":"Производство в РФ",
+   p.date,p.tn,p.okpd,Number(p.qty),
+   p.cost===null?"":Number(p.cost),
+   p.status==="yes"?"Оба сведения есть":
+    p.status==="no"?"Хотя бы одно отсутствует":"Не проверены",
+   c.rate??"",
+   c.valid?c.sum:"",
+   c.valid?"Предварительный расчёт":c.errors.join("; ")
+  ]);
+ });
 
-  products.forEach(p=>{
-    const c=calculate(p);
-    rows.push([
-      p.name,
-      p.operation==="import"?"Импорт":"Производство в РФ",
-      p.date,p.tn,p.okpd,Number(p.qty),
-      p.cost===null?"":Number(p.cost),
-      p.status,p.basis||"",
-      c.rate??"",
-      c.valid?c.sum:"",
-      c.valid?"Предварительный расчёт":c.errors.join("; ")
-    ]);
-  });
+ const ws=XLSX.utils.aoa_to_sheet(rows);
 
-  const ws=XLSX.utils.aoa_to_sheet(rows);
-  ws["!cols"]=[
-    {wch:35},{wch:20},{wch:17},{wch:19},
-    {wch:21},{wch:15},{wch:19},{wch:24},
-    {wch:35},{wch:15},{wch:19},{wch:55}
-  ];
+ ws["!cols"]=[
+  {wch:35},{wch:20},{wch:17},{wch:19},
+  {wch:20},{wch:15},{wch:19},{wch:27},
+  {wch:15},{wch:19},{wch:60}
+ ];
 
-  // Для рассчитанных строк — живые формулы Excel.
-  products.forEach((p,i)=>{
-    const c=calculate(p);
-    if(c.valid) {
-      ws["K"+(i+2)]={t:"n",f:"F"+(i+2)+"*J"+(i+2)};
-    }
-  });
-
-  XLSX.utils.book_append_sheet(wb,ws,"Реестр");
-
-  const summary=[
-    ["TECHFEE ANALYTICS — ОТЧЁТ"],
-    ["Показатель","Значение"],
-    ["Предварительная сумма сбора",0],
-    ["Количество партий",products.length],
-    ["Нормативный акт","Приказ Минпромторга № 5366"],
-    ["Дата приказа","13.10.2026"],
-    ["Начало действия","01.12.2026"],
-    ["Источник","https://base.garant.ru/415080153/"],
-    ["Примечание","Отчёт не является официальным начислением"]
-  ];
-
-  const sumSheet=XLSX.utils.aoa_to_sheet(summary);
-  sumSheet["B3"]={
+ products.forEach((p,i)=>{
+  const c=calculate(p);
+  if(c.valid){
+   ws["J"+(i+2)]={
     t:"n",
-    f:"SUM('Реестр'!K2:K"+Math.max(2,products.length+1)+")"
-  };
-  sumSheet["!cols"]=[{wch:38},{wch:85}];
-  XLSX.utils.book_append_sheet(wb,sumSheet,"Итоги");
+    f:"F"+(i+2)+"*I"+(i+2),
+    v:c.sum
+   };
+  }
+ });
 
-  const scenarios=[[
-    "Категория","Количество","Оба сведения есть",
-    "Сведения отсутствуют"
-  ]];
+ XLSX.utils.book_append_sheet(wb,ws,"Реестр");
 
-  RULES.forEach(r=>{
-    let qty=0;
-    products.forEach(p=>{
-      if(p.category!==r.id||p.tn!==r.tn||
-         !r.okpd.includes(p.okpd)||p.date<"2026-12-01"||
-         !Number.isSafeInteger(+p.qty)||+p.qty<=0)return;
-      qty+=Number(p.qty);
-    });
-    scenarios.push([r.name,qty,qty*r.yes,qty*r.no]);
-  });
+ const valid=products.map(calculate).filter(x=>x.valid);
+ const total=valid.reduce((s,x)=>s+x.sum,0);
 
-  XLSX.utils.book_append_sheet(
-    wb,XLSX.utils.aoa_to_sheet(scenarios),"Сценарии"
-  );
+ const summary=XLSX.utils.aoa_to_sheet([
+  ["TECHFEE ANALYTICS — ОТЧЁТ"],
+  ["Показатель","Значение"],
+  ["Предварительная сумма сбора",total],
+  ["Количество товарных партий",products.length],
+  ["Требуют проверки",products.length-valid.length],
+  ["Нормативный акт","Приказ Минпромторга № 5366"],
+  ["Дата приказа","13.10.2026"],
+  ["Начало действия","01.12.2026"],
+  ["Источник","https://base.garant.ru/415080153/"],
+  ["Примечание","Отчёт не является официальным начислением"]
+ ]);
 
-  const rates=[[
-    "Продукция","ТН ВЭД","ОКПД 2",
-    "Базовая ставка","Сведения есть","Сведений нет"
-  ]];
+ summary["B3"]={
+  t:"n",
+  f:"SUM('Реестр'!J2:J"+Math.max(2,products.length+1)+")",
+  v:total
+ };
+ summary["!cols"]=[{wch:40},{wch:85}];
+ XLSX.utils.book_append_sheet(wb,summary,"Итоги");
 
-  RULES.forEach(r=>rates.push([
-    r.name,r.tn,r.okpd.join(", ")+(r.excluded?" кроме "+r.excluded:""),
-    r.base,r.yes,r.no
-  ]));
+ const scenarios=[[
+  "Категория","Количество","Оба сведения есть",
+  "Хотя бы одно отсутствует"
+ ]];
 
-  XLSX.utils.book_append_sheet(
-    wb,XLSX.utils.aoa_to_sheet(rates),"Ставки"
-  );
+ RULES.forEach(r=>{
+  const qty=products.filter(p=>
+   p.category===r.id&&
+   p.tn===r.tn&&
+   r.okpd.includes(p.okpd)&&
+   p.date>="2026-12-01"&&
+   Number.isSafeInteger(Number(p.qty))&&
+   Number(p.qty)>0&&Number(p.qty)<=100000000
+  ).reduce((s,p)=>s+Number(p.qty),0);
 
-  XLSX.writeFile(wb,"TechFee_Analytics_Report.xlsx");
-  $("excelMessage").textContent="Excel-отчёт сформирован.";
-}
+  scenarios.push([r.name,qty,qty*r.yes,qty*r.no]);
+ });
+
+ XLSX.utils.book_append_sheet(
+  wb,XLSX.utils.aoa_to_sheet(scenarios),"Сценарии"
+ );
+
+ const rates=[[
+  "Продукция","ТН ВЭД","ОКПД 2",
+  "Базовая ставка","Оба сведения есть",
+  "Хотя бы одно отсутствует"
+ ]];
+
+ RULES.forEach(r=>rates.push([
+  r.name,r.tn,
+  r.okpd.join(", ")+(r.excluded?" кроме "+r.excluded:""),
+  r.base,r.yes,r.no
+ ]));
+
+ XLSX.utils.book_append_sheet(
+  wb,XLSX.utils.aoa_to_sheet(rates),"Ставки"
+ );
+
+ XLSX.writeFile(wb,"TechFee_Analytics_Report.xlsx");
+ $("excelMessage").textContent="Excel-отчёт сформирован.";
+});
 
 render();
 </script>
